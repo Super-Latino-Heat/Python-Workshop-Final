@@ -292,3 +292,8 @@ Here some doc links that might be helpful:
 For those who are interested, we've created another branch in this repo that implements this same ToDo App connected to a Database.  
 We've used [SQLite](https://docs.python.org/3/library/sqlite3.html) that is already provided by Python.
 The code is simplified and straight forward, the main goal is just to give you the basics to show you how to connect a DB with a Flask application and perform basic SQL operations.
+
+If you are in the `db` branch, just type the following to run the application:  
+
+MacOs: ```python3 todo_app.py```  
+Windows: ```python todo_app.py```

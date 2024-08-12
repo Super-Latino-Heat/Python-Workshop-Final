@@ -1,0 +1,13 @@
+{% extends 'base.j2' %}
+
+{% block header %}
+  <h1>{% block title %}New ToDo Item{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="update_item">Update Item:</label>
+    <input name="update_item" value="{{ item }}">
+    <input type="submit" value="Update">
+  </form>
+{% endblock %}

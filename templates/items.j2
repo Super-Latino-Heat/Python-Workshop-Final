@@ -1,0 +1,23 @@
+{% extends 'base.j2' %}
+
+{% block header %}
+  <h1>{% block title %}Items{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <div>
+      <a class="action" href="{{ url_for('create')}}">Add New Item</a>
+  </div>
+  {% for item in items %}
+  <article class="item">
+    <div style="display:flex;justify-content:center;align-items:center;margin-block:auto;gap:20px;">
+      <p class="body">{{ item }}</p>
+      <a style="background-color:rgb(164, 255, 240);border-radius:10px;padding:4px" class="action" href="{{ url_for('update', item_id=loop.index0) }}">Update</a>
+      <a style="background-color:rgb(235, 195, 18);border-radius:10px;padding:4px" class="action" href="{{ url_for('delete', item_id=loop.index0) }}">Delete</a>
+    </div>
+  </article>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

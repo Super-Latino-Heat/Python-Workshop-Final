@@ -293,7 +293,7 @@ For those who are interested, we've created another branch (DB) in this repo tha
 We've used [SQLite](https://docs.python.org/3/library/sqlite3.html) that is already provided by Python.
 The code is simplified and straight forward, the main goal is just to give you the basics to show you how to connect a DB with a Flask application and perform basic SQL operations.
 
-## Statistics and Visualization Bonus Feature
+## Statistics and Visualization (Bonus 2)
 
 In this second bonus feature, we created a new branch called `Stats`. This branch introduces the following enhancements:
 

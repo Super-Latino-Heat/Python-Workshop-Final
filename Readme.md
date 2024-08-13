@@ -289,6 +289,29 @@ Here some doc links that might be helpful:
 * [Flask doc](https://flask.palletsprojects.com/en/3.0.x/)
 
 ## DB implementation (Bonus)
-For those who are interested, we've created another branch in this repo that implements this same ToDo App connected to a Database.  
+For those who are interested, we've created another branch (DB) in this repo that implements this same ToDo App connected to a Database.  
 We've used [SQLite](https://docs.python.org/3/library/sqlite3.html) that is already provided by Python.
 The code is simplified and straight forward, the main goal is just to give you the basics to show you how to connect a DB with a Flask application and perform basic SQL operations.
+
+## Statistics and Visualization Bonus Feature
+
+In this second bonus feature, we created a new branch called `Stats`. This branch introduces the following enhancements:
+
+### 1. Database Modifications
+
+- Added a "Done" column to track completed tasks
+- Added an "In Progress" column to monitor ongoing tasks
+
+### 2. Statistical Analysis
+
+We implemented simple statistical analysis of the todo list data, extracting meaningful insights from our task management system.
+
+### 3. Data Visualization
+
+To provide a visual representation of the todo list statistics, we integrated data visualization capabilities. This allows users to get a quick, graphical overview of their task statuses.
+
+### Requirements
+
+To use the visualization features, you need to install the Matplotlib library. You can do this by running: ``pip install matplotlib´´
+
+

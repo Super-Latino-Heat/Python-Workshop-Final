@@ -312,6 +312,6 @@ To provide a visual representation of the todo list statistics, we integrated da
 
 ### Requirements
 
-To use the visualization features, you need to install the Matplotlib library. You can do this by running: ``pip install matplotlib´´
+To use the visualization features, you need to install the Matplotlib library. You can do this by running: `pip install matplotlib`
 
 

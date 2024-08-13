@@ -1,13 +1,25 @@
 {% extends 'base.j2' %}
-
 {% block header %}
-  <h1>{% block title %}New ToDo Item{% endblock %}</h1>
+  <h1>{% block title %}Edit "{{ item[1] }}"{% endblock %}</h1>
 {% endblock %}
-
 {% block content %}
   <form method="post">
-    <label for="update_item">Update Item:</label>
-    <input name="update_item" value="{{ item[1] }}">
-    <input type="submit" value="Update">
+    <label for="update_item">Item</label>
+    <input name="update_item" id="update_item"
+           value="{{ item[1] }}"
+           required>
+    <div>
+      <input type="checkbox" name="done" id="done" {% if item[2] %}checked{% endif %}>
+      <label for="done">Done</label>
+    </div>
+    <div>
+      <input type="checkbox" name="in_progress" id="in_progress" {% if item[3] %}checked{% endif %}>
+      <label for="in_progress">In Progress</label>
+    </div>
+    <input type="submit" value="Save">
+  </form>
+  <hr>
+  <form action="{{ url_for('delete', item_id=item[0]) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
   </form>
 {% endblock %}

@@ -314,4 +314,13 @@ To provide a visual representation of the todo list statistics, we integrated da
 
 To use the visualization features, you need to install the Matplotlib library. You can do this by running: `pip install matplotlib`
 
+### Exercice
+
+Now that you have the example of the pie chart, I invite you to try adding a bar chart using the matplotlib documentation. [Documentation :](https://matplotlib.org/stable/index.html)
+
+Note : You can uncomment the following lines in items.j2
+`<div>
+ <img src="data:image/png;base64,{{ bar_chart }}" alt="Bar Chart">
+ </div>`
+
 

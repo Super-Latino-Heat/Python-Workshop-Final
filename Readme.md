@@ -297,3 +297,36 @@ If you are in the `db` branch, just type the following to run the application:
 
 MacOs: ```python3 todo_app.py```  
 Windows: ```python todo_app.py```
+
+## Statistics and Visualization (Bonus 2)
+
+In this second bonus feature, we created a new branch called `Stats`. This branch introduces the following enhancements:
+
+### 1. Database Modifications
+
+- Added a "Done" column to track completed tasks
+- Added an "In Progress" column to monitor ongoing tasks
+
+### 2. Statistical Analysis
+
+We implemented simple statistical analysis of the todo list data, extracting meaningful insights from our task management system.
+
+### 3. Data Visualization
+
+To provide a visual representation of the todo list statistics, we integrated data visualization capabilities. This allows users to get a quick, graphical overview of their task statuses.
+
+### Requirements
+
+To use the visualization features, you need to install the Matplotlib library. You can do this by running: `pip install matplotlib`
+
+
+### Exercice
+
+Now that you have the example of the pie chart, I invite you to try adding a bar chart using the matplotlib documentation. [Documentation :](https://matplotlib.org/stable/index.html)
+
+Note : You can uncomment the following lines in items.j2
+```html
+ <div>
+  <img src="data:image/png;base64,{{ bar_chart }}" alt="Bar Chart">
+ </div>
+```

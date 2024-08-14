@@ -44,9 +44,9 @@ def index():
         'todo': todo_count
     }
     
-    pie_chart, bar_chart = generate_charts(stats)
+    pie_chart = generate_charts(stats)
     
-    return render_template('items.j2', items=items, pie_chart=pie_chart, bar_chart=bar_chart)
+    return render_template('items.j2', items=items, pie_chart=pie_chart)
 
 @app.route('/create', methods=('GET', 'POST'))
 def create():
@@ -110,21 +110,7 @@ def generate_charts(stats):
     pie_chart = base64.b64encode(pie_buffer.getvalue()).decode()
     plt.close(fig)
 
-    # Bar chart
-    fig, ax = plt.subplots(figsize=(6, 6))
-    ax.bar(['Done', 'In Progress', 'To Do'], 
-           [stats['done'], stats['in_progress'], stats['todo']],
-           color=['#4CAF50', '#FFA500', '#2196F3'])
-    ax.set_title('Task Status Count')
-    ax.set_ylabel('Number of Tasks')
-    #Buffer
-    bar_buffer = BytesIO()
-    plt.savefig(bar_buffer, format='png')
-    bar_buffer.seek(0)
-    bar_chart = base64.b64encode(bar_buffer.getvalue()).decode()
-    plt.close()
-
-    return pie_chart, bar_chart
+    return pie_chart
 
 if __name__ == '__main__':
     create_database()

@@ -103,12 +103,32 @@ def generate_charts(stats):
            autopct='%1.1f%%',
            colors=['#4CAF50', '#FFA500', '#2196F3'])
     ax.set_title('Task Status Distribution')
+
     #Buffer
     pie_buffer = BytesIO()
     fig.savefig(pie_buffer, format='png')
     pie_buffer.seek(0)
     pie_chart = base64.b64encode(pie_buffer.getvalue()).decode()
     plt.close(fig)
+
+    # pie_buffer = BytesIO(): 
+    # This creates an in-memory binary stream. Instead of saving the figure to a file on disk,
+    # we're saving it to this buffer in memory.
+
+    # fig.savefig(pie_buffer, format='png'):
+    # This saves the figure (pie chart) to the buffer in PNG format.
+
+    # pie_buffer.seek(0): 
+    # This resets the buffer position to the beginning. It's necessary 
+    # because after writing to the buffer, the position is at the end.
+
+    # pie_chart = base64.b64encode(pie_buffer.getvalue()).decode():
+    #  This line does two things:
+    # pie_buffer.getvalue() gets the entire contents of the buffer.
+    # base64.b64encode(...) encodes this binary data into a base64 string.
+    # .decode() converts the base64 bytes to a string.
+
+    # plt.close(fig): This closes the matplotlib figure to free up memory
 
     return pie_chart
 

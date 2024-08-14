@@ -319,9 +319,9 @@ To use the visualization features, you need to install the Matplotlib library. Y
 Now that you have the example of the pie chart, I invite you to try adding a bar chart using the matplotlib documentation. [Documentation :](https://matplotlib.org/stable/index.html)
 
 Note : You can uncomment the following lines in items.j2
-```
+```html
  <div>
- <img src="data:image/png;base64,{{ bar_chart }}" alt="Bar Chart">
+  <img src="data:image/png;base64,{{ bar_chart }}" alt="Bar Chart">
  </div>
 ```
 
